@@ -10,6 +10,7 @@ import  {
   import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
   import { useMsal } from '@azure/msal-react';
 import config from "./config";
+import { getListInformation, getSiteInformation, getUser } from './GraphService';
 
 
   // <AppContextSnippet>
@@ -97,7 +98,16 @@ type AppContext = {
       setError(undefined);
     }
   
-    const authProvider = undefined;
+    // const authProvider = undefined;
+     // Used by the Graph SDK to authenticate API calls
+  const authProvider = new AuthCodeMSALBrowserAuthenticationProvider(
+    msal.instance as PublicClientApplication,
+    {
+      account: msal.instance.getActiveAccount()!,
+      scopes: config.scopes,
+      interactionType: InteractionType.Popup,
+    }
+  );
     // </AuthProviderSnippet>
 
   // <UseEffectSnippet>

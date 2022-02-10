@@ -13,6 +13,7 @@ import {
   import { User, Event } from "microsoft-graph";
   import * as SiteAPI from "./ApiDetails";
   
+  
   let graphClient: Client | undefined = undefined;
   
   function ensureClient(authProvider: AuthCodeMSALBrowserAuthenticationProvider) {
