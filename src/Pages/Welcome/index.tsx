@@ -11,7 +11,7 @@ import {
 const Welcome = (props: RouteComponentProps) => {
     const app = useAppContext();
     return (
-        <div>
+        < UnauthenticatedTemplate>
          <div className="p-5 mb-4 bg-light rounded-3">
       <Container fluid>
         <h1>React Graph Tutorial</h1>
@@ -29,7 +29,7 @@ const Welcome = (props: RouteComponentProps) => {
         </UnauthenticatedTemplate>
       </Container>
     </div>   
-        </div>
+        </UnauthenticatedTemplate>
     );
 };
 

@@ -3,24 +3,49 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Login from './Pages/Login';
 import ProvideAppContext from './AppContext';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, BrowserRouter as Router, Route ,Switch, } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-import { MsalProvider } from '@azure/msal-react'
+import { AuthenticatedTemplate, MsalProvider as MealProvider  } from '@azure/msal-react'
 import { IPublicClientApplication } from '@azure/msal-browser';
 import ErrorMessage from './Pages/ErrorMessage/index';
 import Welcome from './Pages/Welcome/index';
 import NavBar from './Pages/Login/Navbar/index';
 
 import Home from './Pages/Home/index';
+import { Typography } from '@mui/material';
 
 
 
+type AppProps = {
+pca: IPublicClientApplication,
 
+};
 
-function App() {
+function App({ pca }: AppProps) {
   return (
-    <div className="App">
-     <ProvideAppContext>
+    <>
+        <React.Fragment>
+      <Typography style={{ display: "none" }}>learn react</Typography>
+      <Router>
+        <MealProvider instance={pca}>
+          <ProvideAppContext >
+            {/* <ThemeProvider > */}
+              <Container className='Container'>
+               
+                <Switch>
+                <Route exact path="/"
+            render={(props) =>
+              <Welcome {...props} />
+            } />
+                  <Route exact path="/" render={(props) => <Welcome {...props} />} /> 
+                </Switch>
+              </Container>
+            {/* </ThemeProvider> */}
+          </ProvideAppContext>
+        </MealProvider>
+      </Router>
+    </React.Fragment >
+     {/* <ProvideAppContext>
       <Router>
         <NavBar />
         <Container>
@@ -32,13 +57,13 @@ function App() {
         </Container>
       </Router>
      
-    </ProvideAppContext>
+    </ProvideAppContext> */}
     <Home/>
     
    
     {/* <GroupedGraph/> */}
     
-    </div>
+    </>
   );
 }
 

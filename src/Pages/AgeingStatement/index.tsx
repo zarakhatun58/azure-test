@@ -50,6 +50,7 @@ const AgeingStatement = () => {
     series: [
       {
         data: [2, 4, 6, 10, 18, 12, 17, 21, 30, 45],
+        colors: ["#1BAAB5","#1BAAB5"],
       },
     ],
   });

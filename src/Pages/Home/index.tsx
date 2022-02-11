@@ -4,6 +4,9 @@ import AgeingStatement from './../AgeingStatement/index';
 import ColumnChart from './../ColumnChart/index';
 import RoundChart from './../RoundChart/index';
 import ForgetPassword from './../ForgetPassword/index';
+import NewBarChart from '../NewBarChart';
+import ChartGraph from './../ChartGraph/index';
+import PhoneBuy from './../PhoneBuy/index';
 
 const Home = () => {
     return (
@@ -15,8 +18,8 @@ const Home = () => {
                </Grid> 
                <Grid container spacing={2}>
                <Grid xs={4}><ForgetPassword/></Grid>
-               <Grid xs={4}> </Grid>
-               <Grid xs={4}></Grid>
+               <Grid xs={4}> <NewBarChart/></Grid>
+               <Grid xs={4}><PhoneBuy/></Grid>
                </Grid> 
         </>
     );

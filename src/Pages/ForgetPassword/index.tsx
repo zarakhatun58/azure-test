@@ -7,7 +7,7 @@ import { Link } from "@mui/material";
 const ForgetPassword = () => {
     return (
         <>
-        <FormGroup >
+        <FormGroup style={{marginLeft:"50px"}} >
             <Typography>Forgot Password</Typography>
       <Grid>
         <TextField

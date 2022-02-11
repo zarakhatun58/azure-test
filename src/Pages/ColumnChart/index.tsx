@@ -8,12 +8,13 @@ const ColumnChart = () => {
     const theme = useTheme();
 
     const options: ApexOptions = {
-      // colors: ['#1BAAB5', '#ABB1B5', '#606C74'],
+       colors: ['#1BAAB5', '#ABB1B5', '#606C74'],
 
-          labels: [" 2019", "2020", "2021"],
+        
           chart: {
             id: "apexchart-example",
             type: 'bar',
+           
           },
           plotOptions: {
             bar: {
@@ -22,7 +23,7 @@ const ColumnChart = () => {
                 position: "",
               },
               // style: {
-              //   color: "#fff",
+              //   colors: "#fff",
               //   background: "#ffeb3b",
               // },
             },
@@ -35,10 +36,13 @@ const ColumnChart = () => {
               "Q3",
              
             ],
+            labels:{
+              show:false
+            }
           },
-        //   fill: {
-        //     colors: ["#1BAAB5"],
-        //   },
+          fill: {
+            colors: ["#1BAAB5",'#ABB1B5','#606C74'],
+          },
         }
 
  const series= [
@@ -46,28 +50,31 @@ const ColumnChart = () => {
               
             data: [44, 55, 41, ],
             fill: {
-              colors: ['#1BAAB5', '#ABB1B5', '#606C74'],
+              colors: ['#1BAAB5', ],
            },
           },
            {
             data: [53, 32, 13,],
             fill: {
-              colors: ['#1BAAB5', '#ABB1B5', '#606C74'],
+              colors: [ '#ABB1B5', ],
            },
           },
            {
             data: [31, 23, 30, ],
              fill: {
-              colors: ['#1BAAB5', '#ABB1B5', '#606C74'],
+              colors: ['#606C74'],
                   },
           },
            {
             data: [13, 33, 43,],
             fill: {
-              colors: ['#1BAAB5', '#ABB1B5', '#606C74'],
+              colors: ['#1BAAB5',],
               },
+             
           },
-          
+     
+           
+       
         
         ]
       
@@ -78,7 +85,7 @@ const ColumnChart = () => {
           series={series}
           type="bar"
           height={170}
-          width={310}
+          width={250}
           padding="1px"
         />    
         </div>
