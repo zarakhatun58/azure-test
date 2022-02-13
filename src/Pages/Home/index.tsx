@@ -7,6 +7,7 @@ import ForgetPassword from './../ForgetPassword/index';
 import NewBarChart from '../NewBarChart';
 import ChartGraph from './../ChartGraph/index';
 import PhoneBuy from './../PhoneBuy/index';
+import PointsTable from '../PointsTable/index';
 
 const Home = () => {
     return (
@@ -21,6 +22,10 @@ const Home = () => {
                <Grid xs={4}> <NewBarChart/></Grid>
                <Grid xs={4}><PhoneBuy/></Grid>
                </Grid> 
+               <Grid container spacing={2}>
+<Grid><PointsTable/> </Grid>
+
+               </Grid>
         </>
     );
 };
