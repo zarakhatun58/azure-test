@@ -11,7 +11,7 @@ const PhoneBuy = () => {
         <Grid className={classes.Header}>
         <Box className={classes.firstContainer}>
              <Typography component="div" className={classes.HeaderText}>
-                  Upcoming Gifts and Rewards
+                Gifts and Rewards
                     </Typography>
              <Typography component="div" className={classes.ViewText}>
                  VIEW ALL

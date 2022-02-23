@@ -13,6 +13,8 @@ import NavBar from './Pages/Login/Navbar/index';
 
 import Home from './Pages/Home/index';
 import { Typography } from '@mui/material';
+import CantSign from './Pages/CantSign/index';
+import CoolData from './Pages/CoolData/index';
 
 
 
@@ -33,11 +35,9 @@ function App({ pca }: AppProps) {
               <Container className='Container'>
                
                 <Switch>
-                <Route exact path="/"
-            render={(props) =>
-              <Welcome {...props} />
-            } />
-                  <Route exact path="/" render={(props) => <Welcome {...props} />} /> 
+                <Route exact path="/" render={(props) =><Welcome {...props} />} />
+                  <Route exact path="/CantSign" render={(props) => <CantSign  />} /> 
+                  <Route exact path="/CoolData" render={(props) => <CoolData  />} /> 
                 </Switch>
               </Container>
             {/* </ThemeProvider> */}

@@ -8,6 +8,13 @@ import NewBarChart from '../NewBarChart';
 import ChartGraph from './../ChartGraph/index';
 import PhoneBuy from './../PhoneBuy/index';
 import PointsTable from '../PointsTable/index';
+import CoolData from './../CoolData/index';
+import CantSign from '../CantSign';
+import NewForm from './../NewForm/index';
+import PopUpForm from './../PopUpForm/index';
+import OverForm from '../OverForm';
+import FormStep1 from './../FormStep1/index';
+import FormStep2 from './../FormSpep2';
 
 const Home = () => {
     return (
@@ -23,8 +30,21 @@ const Home = () => {
                <Grid xs={4}><PhoneBuy/></Grid>
                </Grid> 
                <Grid container spacing={2}>
-<Grid><PointsTable/> </Grid>
+               <Grid xs={12}><PointsTable/> </Grid>
+               <Grid xs={4}><CoolData/> </Grid>
 
+               </Grid>
+               <Grid container spacing={2}>
+               {/* <Grid xs={6}><CantSign/> </Grid> */}
+               <Grid xs={6}> <NewForm/></Grid>
+
+               </Grid>
+               <Grid container spacing={2}>
+               <Grid xs={12}><NewForm/> </Grid>
+               <Grid xs={6}> <PopUpForm/></Grid>
+               <Grid xs={6}> <OverForm/></Grid>
+<Grid xs={6}> <FormStep1/></Grid>
+<Grid xs={6}> <FormStep2/></Grid>
                </Grid>
         </>
     );
