@@ -66,7 +66,7 @@ const BootstrapDialogTitle = (props: DialogTitleProps) => {
             position: 'absolute',
             right: 8,
             top: 8,
-            color: (theme) => theme.palette.grey[500],
+            color: (theme:any) => theme.palette.grey[500],
           }}
         >
           <CloseIcon />
